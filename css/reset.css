@@ -1,7 +1,7 @@
 @charset "utf-8";
 @font-face {
-  font-family: "Lato-Regular";
-  src: url(../font/Lato-Regular.woff);
+  font-family: "BlackHanSans-Regular";
+  src: url(../font/BlackHanSans-Regular.woff);
 }
 
 * {
@@ -12,7 +12,7 @@
 
 html,
 body {
-  font: 16px "Lato-Regular";
+  font: 16px "맑은 고딕";
   color: #333;
   font-weight: 600;
   -webkit-touch-callout: none; /* iOS Safari */

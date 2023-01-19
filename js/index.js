@@ -1,3 +1,26 @@
+const modal = document.getElementById("modal");
+const startButton = document.getElementById("start-button");
+
+startButton.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+const tabButton = document.getElementById("tab-button");
+const tabContent = document.getElementById("tab-content");
+
+tabButton.addEventListener("click", function () {
+  if (tabContent.style.display === "block") {
+    tabContent.style.maxHeight = "0px";
+
+    console.log(11);
+  } else {
+    tabContent.style.display = "block";
+    tabButton.style.display = "none";
+    console.log(12);
+    tabContent.style.maxHeight = "1000px";
+  }
+});
+
 let board = Array(Array(0, 0, 0, 0), Array(0, 0, 0, 0), Array(0, 0, 0, 0), Array(0, 0, 0, 0));
 let tableID = Array(Array("00", "01", "02", "03"), Array("10", "11", "12", "13"), Array("20", "21", "22", "23"), Array("30", "31", "32", "33"));
 
@@ -236,7 +259,10 @@ function generate() {
 // 숫자 생성 확률
 function getNewNum() {
   let randomNum = Math.floor(Math.random() * 10);
-  if (randomNum === 0) return 4;
+  if (randomNum === 0) {
+    return 4;
+  }
+
   return 2;
 }
 
@@ -277,5 +303,8 @@ function checkGameOver() {
 // 게임오버 처리
 function gameover() {
   alert("[Game Over]\nMax: " + getMaxNum());
-  init();
+  let isTrue = confirm("다시 하시겠습니까?");
+
+  if (isTrue) init();
+  else window.close();
 }
