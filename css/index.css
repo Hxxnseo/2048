@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+table {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fbeddc;
+}
+
+table,
+tr,
+td {
+  border: 12px solid #b8ada1;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td {
+  width: 100px;
+  height: 100px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+caption {
+  font-size: 60px;
+  font-family: "Lato";
+  margin-bottom: 30px;
+}
